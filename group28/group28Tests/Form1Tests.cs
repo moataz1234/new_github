@@ -31,4 +31,16 @@ namespace group28.Tests
             Assert.IsTrue(f1.checkuser("s213"));
         }
     }
+    [TestClass()]
+    public class Add_coursetest
+    {
+        [TestMethod()]
+        public void equalTest()
+        {
+            Add_course f1 = new Add_course();
+
+            Assert.ThrowsException<ArgumentException>(() => f1.isequal("assd","asd"));
+           // Assert.IsTrue(f1.checkuser("s213"));
+        }
+    }
 }

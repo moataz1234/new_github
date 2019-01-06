@@ -63,11 +63,12 @@
             this.label2.Size = new System.Drawing.Size(289, 41);
             this.label2.TabIndex = 2;
             this.label2.Text = "Delete Course For Student";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(441, 352);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 3;
@@ -78,7 +79,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(333, 352);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 4;
@@ -89,7 +90,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(223, 81);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 22);
             this.textBox1.TabIndex = 5;
@@ -111,10 +112,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 137);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(63, 137);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(238, 215);
+            this.dataGridView1.Size = new System.Drawing.Size(262, 215);
             this.dataGridView1.TabIndex = 6;
             // 
             // DeleteCourseStu
@@ -128,7 +129,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteCourseStu";
             this.Text = "DeleteCourseStu";
             this.Load += new System.EventHandler(this.DeleteCourseStu_Load);

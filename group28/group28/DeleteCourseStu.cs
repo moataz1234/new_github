@@ -84,5 +84,10 @@ Persist Security Info=False;";
                 connection.Close();
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

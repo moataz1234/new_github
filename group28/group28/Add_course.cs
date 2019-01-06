@@ -52,8 +52,9 @@ namespace group28
                 {
                     {
                         string value = courseDataGridView.Rows[rows].Cells[0].Value.ToString();
-                        if (num == value)
-                            count++;
+                        //if (num == value)
+                        if (isequal(value, num))
+                            count++;  
                     }
                 }
                 if (count == 0)
@@ -66,6 +67,12 @@ namespace group28
                 else
                     MessageBox.Show("The Course Already Exist!");
             }
+        }
+        public bool isequal(string val,string id)
+        {
+            if (val != id)
+                throw new ArgumentException("not equal");
+            return true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
