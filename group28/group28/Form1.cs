@@ -77,6 +77,10 @@ Persist Security Info=False;";
             if (user == "" || pass == "") {
                 MessageBox.Show("you must enter username and pass to login");
             }
+            if (!checkpasswordanduser(pass, user))
+            {
+                MessageBox.Show("you must enter username and pass to login");
+            }
             else if (user[0] == 's')
             {
                 connection.Open();
@@ -168,7 +172,18 @@ Persist Security Info=False;";
                 MessageBox.Show("Incorrect");
             }
         }
-
+        public bool checkpasswordanduser(string pw, string user)
+        {
+            if (string.IsNullOrWhiteSpace(pw))
+            {
+                throw new ArgumentException("password is null");
+            }
+            if (string.IsNullOrWhiteSpace(user))
+            {
+                throw new ArgumentException("user is null");
+            }
+            return true;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             //try

@@ -1,0 +1,17 @@
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\group28Tests.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\group28Tests.pdb
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\group28.exe
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\group28.pdb
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\group28.exe.config
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\obj\Debug\group28Tests.csprojAssemblyReference.cache
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\obj\Debug\group28Tests.csproj.CoreCompileInputs.cache
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\obj\Debug\group28Tests.csproj.CopyComplete
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\obj\Debug\group28Tests.dll
+C:\Users\mtzat\Desktop\final\new_github\group28\group28Tests\obj\Debug\group28Tests.pdb
