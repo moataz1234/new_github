@@ -46,7 +46,8 @@ namespace group28
             int count = 0;
             int count2 = 0;
             if (id == "" || user == "" || fn == "" || ln == "" || pw == "" || mail == "" || gender == "" || dp == "") { MessageBox.Show("you must enter all information about student"); }
-            else if (user[0] != 's') { MessageBox.Show("First Letter in username must be (s)"); }
+            // else if (user[0] != 's') { MessageBox.Show("First Letter in username must be (s)"); }
+            else if (checkuser(user)) { MessageBox.Show("First Letter in username must be (s)"); }
             else
             {
                 for (int rows = 0; rows < (studentDataGridView.Rows.Count) - 1; rows++)
@@ -81,7 +82,27 @@ namespace group28
                     label10.Text = "User is Exist!";
             }
         }
+        public bool checkuser(string user)
+        {
+            if (user[0] != 's')
+                throw new ArgumentException("user incorrect");
+            return true;
+        }
+        public bool isStudentExist(string id)
+        {
+            //int count = 0;
+            //for (int rows = 0; rows < (studentDataGridView.Rows.Count) - 1; rows++)
+            //{
 
+            //    string value = studentDataGridView.Rows[rows].Cells[0].Value.ToString();
+            //    if (id == value)
+            //        count++;
+
+            //}
+            //if (count != 0)
+            //    throw new ArgumentException("student is exist");
+            return true;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Hide();
