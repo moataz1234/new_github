@@ -39,21 +39,26 @@ Persist Security Info=False;";
             view_courses();
 
         }
-
+        private void view_courses()
+        {
+            string username = LoginInfo.userid;
+            sda = new OleDbDataAdapter("SELECT Course_Number FROM student_course WHERE StudentID='" + username + "'", connection);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             string username1 = LoginInfo.userid;
             string id = textBox1.Text.ToString();
-
-            /*
-            string id = textBox1.Text.ToString();
             if (id == "") { MessageBox.Show("you must insert a course number"); }
+
             else
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "select * from student_course where StudentID='" + username1 + "'";
+                command.CommandText = "select * from student_course WHERE Course_Number = '" + id + "'AND StudentID = '" + username1 + "'";
                 OleDbDataReader reader = command.ExecuteReader();
                 int count = 0;
                 while (reader.Read())
@@ -62,12 +67,11 @@ Persist Security Info=False;";
                 }
                 if (count == 1)
                 {
-                    command = new OleDbCommand("DELETE FROM [StudentID] WHERE Number=?", connection);
-                    {
-                        command.Parameters.AddWithValue("Number", id);
-                        command.ExecuteNonQuery();
-                    }
-                    MessageBox.Show("The Course Deleted", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    OleDbCommand cmd = new OleDbCommand("DELETE FROM student_course WHERE Course_Number = '" + id + "'AND StudentID = '" + username1 + "'", connection);
+                    cmd.ExecuteNonQuery();
+                    OleDbCommand cmd1 = new OleDbCommand("DELETE FROM StudentInCourse WHERE num_course = '" + id + "'AND id_student = '" + username1 + "'", connection);
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Data Deleted", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 if (count > 1)
                 {
@@ -78,23 +82,7 @@ Persist Security Info=False;";
                     MessageBox.Show("Incorrect");
                 }
                 connection.Close();
-            */
-
-            connection.Open();
-            OleDbCommand cmd = new OleDbCommand("DELETE FROM student_course WHERE Course_Number = '" + id + "'AND StudentID = '"+username1+"'", connection);
-            cmd.ExecuteNonQuery();
-            OleDbCommand cmd1 = new OleDbCommand("DELETE FROM StudentInCourse WHERE num_course = '" + id + "'AND id_student = '" + username1 + "'", connection);
-            cmd1.ExecuteNonQuery();
-            MessageBox.Show("Data Deleted", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            connection.Close();
-        }
-        private void view_courses()
-        {
-           string username1 = LoginInfo.userid;
-            sda = new OleDbDataAdapter("SELECT Course_Number FROM student_course WHERE StudentID='" + username1 + "'", connection);
-            dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
+            }
         }
     }
 }
