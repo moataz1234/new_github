@@ -17,7 +17,8 @@ namespace group28
     public partial class DeleteCourseStu : Form
     {
         public StudentZone asd = new StudentZone();
-   //     public OleDbConnection conn = new OleDbConnection();
+        private OleDbDataAdapter sda;
+        DataTable dt;
         private OleDbConnection connection = new OleDbConnection();
 
         public DeleteCourseStu()
@@ -35,7 +36,7 @@ Persist Security Info=False;";
 
         public void DeleteCourseStu_Load(object sender, EventArgs e)
         {
-        //    dataGridView1.DataSource = GitCourses();
+            view_courses();
 
         }
 
@@ -87,23 +88,13 @@ Persist Security Info=False;";
             MessageBox.Show("Data Deleted", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             connection.Close();
         }
-        //private DataTable GitCourses()
-        //{
-        /*
-        DataTable Dtcourse = new DataTable();
-        string connstring = ConfigurationManager.ConnectionStrings["dbx"].ConnectionString;
-        using (OleDbConnection mm = new OleDbConnection(connstring))
+        private void view_courses()
         {
-            using (OleDbCommand cmd = new OleDbCommand("Select Course_Number from student_course", mm))
-            {
-                mm.Open();
-                OleDbDataReader reader = cmd.ExecuteReader();
-                Dtcourse.Load(reader);
-
-            }
+           string username1 = LoginInfo.userid;
+            sda = new OleDbDataAdapter("SELECT Course_Number FROM student_course WHERE StudentID='" + username1 + "'", connection);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
-            return Dtcourse;
-*/
-        //}
     }
 }
