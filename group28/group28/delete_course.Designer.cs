@@ -72,13 +72,13 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Ivory;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageKey = "(none)";
-            this.button1.Location = new System.Drawing.Point(603, 106);
+            this.button1.Location = new System.Drawing.Point(608, 102);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 32);
+            this.button1.Size = new System.Drawing.Size(127, 40);
             this.button1.TabIndex = 17;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = false;
@@ -176,7 +176,7 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.Khaki;
+            this.label_title.BackColor = System.Drawing.Color.Beige;
             this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.Green;
             this.label_title.Location = new System.Drawing.Point(384, 9);
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(1039, 550);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_title);

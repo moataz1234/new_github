@@ -397,7 +397,7 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.Khaki;
+            this.label_title.BackColor = System.Drawing.Color.Ivory;
             this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.Green;
             this.label_title.Location = new System.Drawing.Point(637, 9);
@@ -421,7 +421,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1364, 569);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_title);

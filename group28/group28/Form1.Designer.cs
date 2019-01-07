@@ -37,8 +37,6 @@
             this.password_text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label_title = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -49,11 +47,11 @@
             this.aboutDeveloperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -78,7 +76,7 @@
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Khaki;
+            this.linkLabel1.BackColor = System.Drawing.Color.Beige;
             this.linkLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.linkLabel1.Location = new System.Drawing.Point(235, 111);
             this.linkLabel1.Name = "linkLabel1";
@@ -108,7 +106,7 @@
             this.Login_button.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Login_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Login_button.Location = new System.Drawing.Point(283, 160);
-            this.Login_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Login_button.Margin = new System.Windows.Forms.Padding(4);
             this.Login_button.Name = "Login_button";
             this.Login_button.Size = new System.Drawing.Size(131, 44);
             this.Login_button.TabIndex = 12;
@@ -119,7 +117,7 @@
             // username_text
             // 
             this.username_text.Location = new System.Drawing.Point(133, 39);
-            this.username_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username_text.Margin = new System.Windows.Forms.Padding(4);
             this.username_text.Name = "username_text";
             this.username_text.Size = new System.Drawing.Size(227, 22);
             this.username_text.TabIndex = 9;
@@ -128,7 +126,7 @@
             // password_text
             // 
             this.password_text.Location = new System.Drawing.Point(133, 74);
-            this.password_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password_text.Margin = new System.Windows.Forms.Padding(4);
             this.password_text.Name = "password_text";
             this.password_text.PasswordChar = '•';
             this.password_text.Size = new System.Drawing.Size(227, 22);
@@ -137,7 +135,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Beige;
+            this.label2.BackColor = System.Drawing.Color.Ivory;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -149,36 +147,14 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.Khaki;
-            this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title.ForeColor = System.Drawing.Color.Green;
-            this.label_title.Location = new System.Drawing.Point(288, 28);
+            this.label_title.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label_title.Font = new System.Drawing.Font("Palatino Linotype", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label_title.Location = new System.Drawing.Point(299, 0);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(188, 54);
+            this.label_title.Size = new System.Drawing.Size(198, 53);
             this.label_title.TabIndex = 18;
             this.label_title.Text = "SUCCESS";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(481, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 28);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 54);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -197,7 +173,7 @@
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(691, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 46);
             this.button1.TabIndex = 23;
@@ -259,10 +235,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Khaki;
+            this.label4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label4.Font = new System.Drawing.Font("Urdu Typesetting", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Green;
-            this.label4.Location = new System.Drawing.Point(12, 28);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 44);
             this.label4.TabIndex = 25;
@@ -272,29 +248,36 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Khaki;
+            this.label5.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label5.Font = new System.Drawing.Font("Urdu Typesetting", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Green;
-            this.label5.Location = new System.Drawing.Point(703, 28);
+            this.label5.Location = new System.Drawing.Point(683, -3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 44);
             this.label5.TabIndex = 26;
             this.label5.Text = "Date";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.panel1.Controls.Add(this.label_title);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(0, 31);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(819, 54);
+            this.panel1.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(819, 425);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label_title);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -308,11 +291,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,8 +310,6 @@
         private System.Windows.Forms.TextBox password_text;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_title;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -340,6 +321,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

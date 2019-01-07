@@ -182,15 +182,16 @@
             // 
             // add_corse
             // 
-            this.add_corse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_corse.BackgroundImage")));
+            this.add_corse.BackColor = System.Drawing.Color.Green;
             this.add_corse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.add_corse.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_corse.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.add_corse.Location = new System.Drawing.Point(355, 402);
             this.add_corse.Name = "add_corse";
             this.add_corse.Size = new System.Drawing.Size(84, 55);
             this.add_corse.TabIndex = 15;
             this.add_corse.Text = "Add";
-            this.add_corse.UseVisualStyleBackColor = true;
+            this.add_corse.UseVisualStyleBackColor = false;
             this.add_corse.Click += new System.EventHandler(this.add_corse_Click);
             // 
             // label8
@@ -315,7 +316,7 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.Khaki;
+            this.label_title.BackColor = System.Drawing.Color.FloralWhite;
             this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.Green;
             this.label_title.Location = new System.Drawing.Point(578, 22);
@@ -339,8 +340,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(1375, 612);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1315, 583);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.groupBox1);
