@@ -39,7 +39,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(143, 145);
+            this.dataGridView1.Location = new System.Drawing.Point(79, 101);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(665, 329);
@@ -59,10 +59,10 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.Khaki;
+            this.label_title.BackColor = System.Drawing.Color.Beige;
             this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.Green;
-            this.label_title.Location = new System.Drawing.Point(267, 9);
+            this.label_title.Location = new System.Drawing.Point(261, 9);
             this.label_title.Name = "label_title";
             this.label_title.Size = new System.Drawing.Size(254, 54);
             this.label_title.TabIndex = 33;
@@ -72,8 +72,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(869, 486);
+            this.BackColor = System.Drawing.Color.Ivory;
+            this.ClientSize = new System.Drawing.Size(807, 461);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);

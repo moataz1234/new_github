@@ -316,12 +316,13 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.FloralWhite;
-            this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title.ForeColor = System.Drawing.Color.Green;
+            this.label_title.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label_title.Font = new System.Drawing.Font("Bookman Old Style", 24F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label_title.Location = new System.Drawing.Point(578, 22);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(234, 54);
+            this.label_title.Size = new System.Drawing.Size(260, 45);
             this.label_title.TabIndex = 19;
             this.label_title.Text = "Add Course";
             // 
@@ -340,7 +341,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1315, 583);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_title);

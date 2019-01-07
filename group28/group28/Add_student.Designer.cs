@@ -337,7 +337,7 @@
             this.studentDataGridView.Location = new System.Drawing.Point(454, 140);
             this.studentDataGridView.Name = "studentDataGridView";
             this.studentDataGridView.RowTemplate.Height = 24;
-            this.studentDataGridView.Size = new System.Drawing.Size(898, 370);
+            this.studentDataGridView.Size = new System.Drawing.Size(732, 414);
             this.studentDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -397,12 +397,13 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.Ivory;
-            this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title.ForeColor = System.Drawing.Color.Green;
-            this.label_title.Location = new System.Drawing.Point(637, 9);
+            this.label_title.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label_title.Font = new System.Drawing.Font("Bookman Old Style", 24F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.ForeColor = System.Drawing.Color.Navy;
+            this.label_title.Location = new System.Drawing.Point(583, 14);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(250, 54);
+            this.label_title.Size = new System.Drawing.Size(284, 45);
             this.label_title.TabIndex = 19;
             this.label_title.Text = "Add Student";
             // 
@@ -421,8 +422,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1364, 569);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(1239, 569);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.studentDataGridView);

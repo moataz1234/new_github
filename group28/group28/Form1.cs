@@ -92,6 +92,7 @@ Persist Security Info=False;";
                 while (reader.Read())
                 {
                     LoginInfo.userid = reader["ID"].ToString();
+                    LoginInfo.firstname = reader["firstName"].ToString();
                     count++;
                 }
                 if (count == 1)
@@ -120,6 +121,7 @@ Persist Security Info=False;";
                 while (reader.Read())
                 {
                     LoginInfo.userid = reader["ID"].ToString();
+                    LoginInfo.firstname = reader["firstName"].ToString();
                     count++;
                 }
                 if (count == 1)
