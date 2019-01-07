@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCourseStu));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,9 +39,11 @@
             this.student_courseTableAdapter = new group28.Database23DataSetTableAdapters.student_courseTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.database23DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentcourseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,12 +126,24 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Number of courses in your schedule:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // DeleteCourseStu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(572, 399);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
@@ -142,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.database23DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentcourseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +173,6 @@
         private Database23DataSetTableAdapters.student_courseTableAdapter student_courseTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

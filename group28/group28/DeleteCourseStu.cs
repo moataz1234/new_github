@@ -89,5 +89,12 @@ Persist Security Info=False;";
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            StudentZone szsz = new StudentZone();
+            szsz.Show();
+        }
     }
 }
