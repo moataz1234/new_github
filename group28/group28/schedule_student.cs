@@ -25,20 +25,6 @@ namespace group28
 Persist Security Info=False;";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            sda = new OleDbDataAdapter("SELECT Name,day,Hour,lecturerName,lec_id FROM Course,student,student_course WHERE student_course.StudentID='"+LoginInfo.userid+"' AND Course.Number=student_course.Course_Number", connection);
-            dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
-            //dt = (DataTable)ViewState["dt"];
-            dt = dt.DefaultView.ToTable(true, "Name", "day", "Hour","lecturerName", "lec_id");
-            dataGridView1.DataSource = dt;
-            //dataGridView1.DataBindings();
-            dataGridView1.Columns[4].HeaderText = "Class";
-            dataGridView1.Refresh();
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -46,9 +32,21 @@ Persist Security Info=False;";
 
         private void schedule_student_Load(object sender, EventArgs e)
         {
-
+            scestu();
         }
-
+        private void scestu()
+        {
+            sda = new OleDbDataAdapter("SELECT Name,day,Hour,lecturerName,lec_id FROM Course,student,student_course WHERE student_course.StudentID='" + LoginInfo.userid + "' AND Course.Number=student_course.Course_Number", connection);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+            //dt = (DataTable)ViewState["dt"];
+            dt = dt.DefaultView.ToTable(true, "Name", "day", "Hour", "lecturerName", "lec_id");
+            dataGridView1.DataSource = dt;
+            //dataGridView1.DataBindings();
+            dataGridView1.Columns[4].HeaderText = "Class";
+            dataGridView1.Refresh();
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Hide();
