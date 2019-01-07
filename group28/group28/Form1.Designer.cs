@@ -74,10 +74,10 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Violet;
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Khaki;
-            this.linkLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linkLabel1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.linkLabel1.Location = new System.Drawing.Point(235, 111);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(122, 17);
@@ -149,7 +149,7 @@
             this.label_title.AutoSize = true;
             this.label_title.BackColor = System.Drawing.Color.LightSlateGray;
             this.label_title.Font = new System.Drawing.Font("Palatino Linotype", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label_title.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.label_title.Location = new System.Drawing.Point(299, 0);
             this.label_title.Name = "label_title";
             this.label_title.Size = new System.Drawing.Size(198, 53);
@@ -237,7 +237,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LightSlateGray;
             this.label4.Font = new System.Drawing.Font("Urdu Typesetting", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 44);
@@ -250,7 +250,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.LightSlateGray;
             this.label5.Font = new System.Drawing.Font("Urdu Typesetting", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.label5.Location = new System.Drawing.Point(683, -3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 44);

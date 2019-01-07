@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static group28.Form1;
 
 namespace group28
 {
@@ -94,6 +95,8 @@ namespace group28
             t.Tick += new EventHandler(this.t_Tick);
             t.Start();
             label5.Text = DateTime.Now.ToShortDateString();
+            label_title.Text = "Welcome ";
+            label_title.Text += LoginInfo.firstname;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
