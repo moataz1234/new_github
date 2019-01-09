@@ -40,10 +40,8 @@ Persist Security Info=False;";
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
-            //dt = (DataTable)ViewState["dt"];
             dt = dt.DefaultView.ToTable(true, "Name", "day", "Hour", "lecturerName", "lec_id");
             dataGridView1.DataSource = dt;
-            //dataGridView1.DataBindings();
             dataGridView1.Columns[4].HeaderText = "Class";
             dataGridView1.Refresh();
         }

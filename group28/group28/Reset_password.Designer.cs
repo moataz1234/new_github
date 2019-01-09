@@ -96,10 +96,10 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.label_title.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title.ForeColor = System.Drawing.Color.Green;
-            this.label_title.Location = new System.Drawing.Point(171, 18);
+            this.label_title.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label_title.Location = new System.Drawing.Point(191, 18);
             this.label_title.Name = "label_title";
             this.label_title.Size = new System.Drawing.Size(302, 54);
             this.label_title.TabIndex = 38;
@@ -171,9 +171,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Ivory;
+            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Green;
+            this.button1.ForeColor = System.Drawing.Color.Honeydew;
             this.button1.ImageKey = "(none)";
             this.button1.Location = new System.Drawing.Point(333, 158);
             this.button1.Name = "button1";
@@ -235,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(637, 387);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label_title);

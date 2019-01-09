@@ -59,7 +59,7 @@ namespace group28
 
                             courseDataGridView.Rows[rows].Cells[2].Value = classs;
                         }
-                        else
+                        else 
                             MessageBox.Show("You can't update because time conflicts with another course at same day,hour and class ");
                     }
                 }
