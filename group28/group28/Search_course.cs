@@ -40,7 +40,7 @@ Persist Security Info=False;";
         private void btn_search_crs_Click(object sender, EventArgs e)
         {
             string id = string.Format(textB_id_crs.Text);
-            if (id == "")
+            if (checkbox(id))
             {
                 MessageBox.Show("You Must Insert a Number Course!");
             }
@@ -74,7 +74,14 @@ Persist Security Info=False;";
                 connection.Close();
             }
         }
-
+        public bool checkbox(string id)
+        {
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                return true;
+            }
+            return false;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManagerZone man = new ManagerZone();

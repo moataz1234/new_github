@@ -56,6 +56,7 @@ namespace group28
                         }
                         if (count == 0)
                         {
+
                             courseDataGridView.Rows[rows].Cells[2].Value = classs;
                         }
                         else
@@ -68,7 +69,11 @@ namespace group28
             this.courseBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database23DataSet);
         }
-
+        public bool updateclass(string cls,int c,DataGridView d,int index)
+        {
+            return true;
+        }
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Hide();

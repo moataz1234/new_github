@@ -43,4 +43,14 @@ namespace group28.Tests
            // Assert.IsTrue(f1.checkuser("s213"));
         }
     }
+    [TestClass()]
+    public class search_coursetest
+    {
+        [TestMethod()]
+        public void checkboxTest()
+        {
+            Search_course ss = new Search_course();
+            Assert.IsTrue(ss.checkbox(""));
+        }
+    }
 }
