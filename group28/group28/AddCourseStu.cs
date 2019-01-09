@@ -57,8 +57,29 @@ Persist Security Info=False;";
         {
             string username1 = LoginInfo.userid;
             string countt = comboBox1.SelectedValue.ToString();
-
             connection.Open();
+            OleDbCommand command2 = new OleDbCommand();
+            command2.Connection = connection;
+            command2.CommandText = "select * from student_course WHERE Course_Number = '" + countt + "'AND StudentID = '" + username1 + "'";
+            OleDbDataReader reader2 = command2.ExecuteReader();
+            int count2 = 0;
+            while (reader2.Read())
+            {
+                count2++;
+            }
+            if (count2 == 1)
+            {
+                MessageBox.Show("You Already have This Course");
+            }
+            if (count2 > 1)
+            {
+                MessageBox.Show("Duplicate");
+            }
+            if (count2 < 1)
+            {
+                MessageBox.Show("Incorrect");
+            }
+            //------------------------------------------------------------------------------
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
             command.CommandText = "select * from student_course WHERE Course_Number = '" + countt + "'AND StudentID = '" + username1 + "'";
@@ -97,7 +118,7 @@ Persist Security Info=False;";
             }
             connection.Close();
         }
-
+    
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Hide();
