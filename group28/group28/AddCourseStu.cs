@@ -14,7 +14,7 @@ namespace group28
 {
     public partial class AddCourseStu : Form
     {
-        public OleDbConnection conn = new OleDbConnection();
+        public OleDbConnection connection = new OleDbConnection();
         public StudentZone mm = new StudentZone();
         public AddCourseStu()
         {
@@ -29,10 +29,10 @@ namespace group28
 
         public void AddCourseStu_Load(object sender, EventArgs e)
         {
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Database23.mdb;
+            connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Database23.mdb;
 Persist Security Info=False;";
-            conn.Open();
-            OleDbCommand sc = new OleDbCommand("select Name,Number from Course", conn);
+            connection.Open();
+            OleDbCommand sc = new OleDbCommand("select Name,Number from Course", connection);
             OleDbDataReader reader;
 
             reader = sc.ExecuteReader();
@@ -45,7 +45,7 @@ Persist Security Info=False;";
             comboBox1.ValueMember = "Number";
             comboBox1.DisplayMember = "Name";
             comboBox1.DataSource = dt;
-            conn.Close();
+            connection.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,30 +55,47 @@ Persist Security Info=False;";
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string username1 = LoginInfo.userid;
+            string countt = comboBox1.SelectedValue.ToString();
 
-            try
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from student_course WHERE Course_Number = '" + countt + "'AND StudentID = '" + username1 + "'";
+            OleDbDataReader reader = command.ExecuteReader();
+            int count = 0;
+            while (reader.Read())
             {
-                conn.Open();
-                string count = comboBox1.SelectedValue.ToString();
-                string aaa = "1";
-                string username1 = LoginInfo.userid;
-                String my_querry = "INSERT INTO student_course(Course_Number,StudentID,exsit)VALUES('" + count + "','" + username1 + "','"+aaa+"')";
-                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
-                cmd.ExecuteNonQuery();
-                String my_querry1 = "INSERT INTO StudentInCourse(id_student,num_course)VALUES('" + username1 + "','" + count + "')";
-                OleDbCommand cmd1 = new OleDbCommand(my_querry1, conn);
-                cmd1.ExecuteNonQuery();
-
-                MessageBox.Show("Data saved successfuly...!");
+                count++;
             }
-            catch (Exception ex)
+            if (count == 1)
             {
-                MessageBox.Show("Failed due to " + ex.Message);
+                MessageBox.Show("You Already have This Course");
             }
-            finally
+            if (count > 1)
             {
-                conn.Close();
+                MessageBox.Show("Duplicate");
             }
+            if (count < 1)
+            {
+                try
+                {
+                    connection.Open();
+                    string aaa = "1";
+                    String my_querry = "INSERT INTO student_course(Course_Number,StudentID,exsit)VALUES('" + countt + "','" + username1 + "','" + aaa + "')";
+                    OleDbCommand cmd = new OleDbCommand(my_querry, connection);
+                    cmd.ExecuteNonQuery();
+                    String my_querry1 = "INSERT INTO StudentInCourse(id_student,num_course)VALUES('" + username1 + "','" + countt + "')";
+                    OleDbCommand cmd1 = new OleDbCommand(my_querry1, connection);
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Course Added successfuly...!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed due to " + ex.Message);
+                }
+            }
+            connection.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
