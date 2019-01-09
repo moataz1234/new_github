@@ -94,7 +94,7 @@ Persist Security Info=False;";
         {
             Hide();
             StudentZone szsz = new StudentZone();
-            szsz.Show();
+            szsz.Show();          
         }
     }
 }
