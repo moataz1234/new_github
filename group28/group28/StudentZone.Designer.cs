@@ -344,7 +344,7 @@
             this.label_title.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label_title.Font = new System.Drawing.Font("Palatino Linotype", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label_title.Location = new System.Drawing.Point(443, 1);
+            this.label_title.Location = new System.Drawing.Point(406, 1);
             this.label_title.Name = "label_title";
             this.label_title.Size = new System.Drawing.Size(157, 53);
             this.label_title.TabIndex = 18;
