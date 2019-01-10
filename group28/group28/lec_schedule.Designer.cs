@@ -63,7 +63,7 @@
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 24F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(294, 14);
+            this.label1.Location = new System.Drawing.Point(297, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(283, 45);
             this.label1.TabIndex = 34;
