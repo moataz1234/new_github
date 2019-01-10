@@ -53,4 +53,15 @@ namespace group28.Tests
             Assert.IsTrue(ss.checkbox(""));
         }
     }
+
+    [TestClass()]
+    public class addcrstutest
+    {
+        [TestMethod()]
+        public void checkcountTest()
+        {
+            AddCourseStu ss = new AddCourseStu();
+            Assert.IsTrue(ss.checkcount(0,1));
+        }
+    }
 }
