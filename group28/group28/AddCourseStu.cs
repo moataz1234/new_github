@@ -69,29 +69,17 @@ Persist Security Info=False;";
                 hour = reader1["Hour"].ToString();
                 day = reader1["day"].ToString();
             }
-            connection.Close();
             //----------------------------------------------------------------------
-            connection.Open();
             OleDbCommand command2 = new OleDbCommand();
             command2.Connection = connection;
-            command2.CommandText = "select * from Course WHERE Number = '" + countt + "'AND Hour = '" + hour + "' AND day='" + day + "'";
+            command2.CommandText = "select * from Course WHERE Hour = '" + hour + "' AND day='" + day + "'";
             OleDbDataReader reader2 = command2.ExecuteReader();
             int count2 = 0;
             while (reader2.Read())
             {
                 count2++;
             }
-            if (count2 > 1)
-            {
-                MessageBox.Show("Duplicate");
-            }
-            if (count2 < 1)
-            {
-                MessageBox.Show("conflicts with another course");
-            }
-            connection.Close();
             //------------------------------------------------------------------------------
-            connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
             command.CommandText = "select * from student_course WHERE Course_Number = '" + countt + "'AND StudentID = '" + username1 + "'";
@@ -105,11 +93,7 @@ Persist Security Info=False;";
             {
                 MessageBox.Show("You Already have This Course");
             }
-            if (count > 1)
-            {
-                MessageBox.Show("Duplicate");
-            }
-            if (count < 1)
+            if (count < 1 && count2==0)
             {
                 try
                 {
@@ -127,6 +111,7 @@ Persist Security Info=False;";
                     MessageBox.Show("Failed due to " + ex.Message);
                 }
             }
+            if (count2 != 0 && count==0) { MessageBox.Show("conflicts with another course"); }
             connection.Close();
         }
     
