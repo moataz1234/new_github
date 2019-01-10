@@ -74,12 +74,12 @@ Persist Security Info=False;";
             string user = string.Format(username_text.Text);
             string pass = string.Format(password_text.Text);
             LoginInfo.user = user;
-            if (user == "" || pass == "") {
-                MessageBox.Show("you must enter username and pass to login");
-            }
-            if (!checkpasswordanduser(pass, user))
+            if (user == "" || pass == "")
             {
-                MessageBox.Show("you must enter username and pass to login");
+                if (!checkpasswordanduser(pass, user))
+                {
+                    MessageBox.Show("you must enter username and pass to login");
+                }
             }
             else if (user[0] == 's')
             {

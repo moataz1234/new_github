@@ -111,10 +111,25 @@ Persist Security Info=False;";
                     MessageBox.Show("Failed due to " + ex.Message);
                 }
             }
-            if (count2 != 0 && count==0) { MessageBox.Show("conflicts with another course"); }
+            if (checkcount(count,count2)) { MessageBox.Show("conflicts with another course"); }
             connection.Close();
         }
-    
+    public bool checkcount(int count1, int count2)
+        {
+            if(count1 !=0 && count2 != 0)
+            {
+                return false;
+            }
+          else  if (count1 != 0 && count2 == 0)
+            {
+                return false;
+            }
+           else if (count1 == 0 && count2 == 0)
+            {
+                return false;
+            }
+           return true;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Hide();
