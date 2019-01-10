@@ -52,15 +52,26 @@ Persist Security Info=False;";
         {
             string ID = comboBox1.SelectedValue.ToString();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            string  day, hour;
             string username1 = LoginInfo.userid;
             string countt = comboBox1.SelectedValue.ToString();
+            //----------------------------------------------------------------------
             connection.Open();
+            OleDbCommand command1 = new OleDbCommand();
+            command1.Connection = connection;
+            command1.CommandText = "select * from Course WHERE Number = '" + countt + "'";
+            OleDbDataReader reader1 = command1.ExecuteReader();
+            while (reader1.Read())
+            {
+                hour = reader1["Hour"].ToString();
+                day = reader1["day"].ToString();
+            }
+            //----------------------------------------------------------------------
             OleDbCommand command2 = new OleDbCommand();
             command2.Connection = connection;
-            command2.CommandText = "select * from student_course WHERE Course_Number = '" + countt + "'AND StudentID = '" + username1 + "'";
+            command2.CommandText = "select * from Course WHERE Number = '" + countt + "'AND StudentID = '";
             OleDbDataReader reader2 = command2.ExecuteReader();
             int count2 = 0;
             while (reader2.Read())
