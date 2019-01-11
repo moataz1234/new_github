@@ -64,4 +64,15 @@ namespace group28.Tests
             Assert.IsTrue(ss.checkcount(0,1));
         }
     }
+
+    [TestClass()]
+    public class delecoursetest
+    {
+        [TestMethod()]
+        public void checkisnullTest()
+        {
+            delete_course d = new delete_course();
+            Assert.IsFalse(d.checkisnull("asd"));
+        }
+    }
 }
