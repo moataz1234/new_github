@@ -31,10 +31,12 @@ Persist Security Info=False;";
         }
         private void view1()
         {
-            sda = new OleDbDataAdapter("SELECT sender_id,reciever_id,Text FROM messages WHERE messages.sender_id ='" + LoginInfo.userid + "'", connection);
+            sda = new OleDbDataAdapter("SELECT reciever_id,Text FROM messages WHERE messages.sender_id ='" + LoginInfo.userid + "'", connection);
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].HeaderText = "Send To";
+            dataGridView1.Columns[1].HeaderText = "Message Text";
         }
         private void view2()
         {
@@ -42,6 +44,9 @@ Persist Security Info=False;";
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView2.DataSource = dt;
+            dataGridView2.Columns[0].HeaderText = "Send By";
+            dataGridView2.Columns[1].HeaderText = "Message Text";
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
