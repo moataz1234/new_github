@@ -12,11 +12,12 @@ namespace group28.Tests
     public class Form1Tests
     {
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
         public void checkpasswordanduserTest()
         {
             Form1 f1 = new Form1();
-            f1.checkpasswordanduser("", "gf");
+            bool fals= f1.checkpasswordanduser("", "gf");
+            Assert.IsFalse(fals);
+
         }
     }
     [TestClass()]
