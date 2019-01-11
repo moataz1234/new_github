@@ -40,7 +40,7 @@ Persist Security Info=False;";
             string username1 = textB_num.Text.ToString();
             string npw = textB_pw.Text.ToString();
             string id = textB_id.Text.ToString();
-            if (username1 == "" || npw == "" || id=="") { MessageBox.Show("you must insert your username and new password!"); }
+            if (username1 == "" || npw == "" || id=="") { label3.Text="insert your id and username and new password!"; }
             else if (username1[0] == 's')
             {
                 connection.Open();
@@ -65,7 +65,7 @@ Persist Security Info=False;";
                 }
                 if (count < 1)
                 {
-                    MessageBox.Show("Incorrect");
+                    label3.Text = "username or ID Incorrect";
                 }
                 connection.Close();
             }
@@ -93,7 +93,7 @@ Persist Security Info=False;";
                 }
                 if (count < 1)
                 {
-                    MessageBox.Show("Incorrect");
+                    label3.Text = "username or ID Incorrect";
                 }
                 connection.Close();
             }
@@ -121,13 +121,13 @@ Persist Security Info=False;";
                 }
                 if (count < 1)
                 {
-                    MessageBox.Show("Incorrect");
+                    label3.Text = "username or ID Incorrect";
                 }
                 connection.Close();
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                label3.Text = "username or ID Incorrect";
             }
         }
     }

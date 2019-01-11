@@ -51,6 +51,7 @@
             this.textB_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database23DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
@@ -175,7 +176,7 @@
             this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Honeydew;
             this.button1.ImageKey = "(none)";
-            this.button1.Location = new System.Drawing.Point(333, 158);
+            this.button1.Location = new System.Drawing.Point(332, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 38);
             this.button1.TabIndex = 27;
@@ -217,6 +218,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textB_num);
             this.groupBox1.Controls.Add(this.textB_pw);
@@ -226,10 +228,21 @@
             this.groupBox1.Controls.Add(this.textB_id);
             this.groupBox1.Location = new System.Drawing.Point(100, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(485, 212);
+            this.groupBox1.Size = new System.Drawing.Size(481, 227);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reset password";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bell MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(7, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "label3";
             // 
             // Reset_password
             // 
@@ -276,5 +289,6 @@
         private System.Windows.Forms.TextBox textB_id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -74,13 +74,11 @@ Persist Security Info=False;";
             string user = string.Format(username_text.Text);
             string pass = string.Format(password_text.Text);
             LoginInfo.user = user;
-            if (user == "" || pass == "")
-            {
                 if (!checkpasswordanduser(pass, user))
                 {
-                    MessageBox.Show("you must enter username and pass to login");
+                    label1.Text="you must enter username and pass to login";
                 }
-            }
+           
             else if (user[0] == 's')
             {
                 connection.Open();
@@ -106,7 +104,7 @@ Persist Security Info=False;";
                 }
                 if (count < 1)
                 {
-                    MessageBox.Show("Incorrect");
+                    label1.Text = "username or password Incorrect";
                 }
                 connection.Close();
             }
@@ -135,7 +133,7 @@ Persist Security Info=False;";
                 }
                 if (count < 1)
                 {
-                    MessageBox.Show("Incorrect");
+                    label1.Text = "username or password Incorrect";
                 }
                 connection.Close();
             }
@@ -164,40 +162,27 @@ Persist Security Info=False;";
                 }
                 if (count < 1)
                 {
-                    MessageBox.Show("Incorrect");
+                    label1.Text = "username or password Incorrect";
                 }
-
                 connection.Close();
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                label1.Text = "username or password Incorrect";
+
             }
         }
         public bool checkpasswordanduser(string pw, string user)
         {
             if (string.IsNullOrWhiteSpace(pw))
             {
-                throw new ArgumentException("password is null");
+                return false;
             }
             if (string.IsNullOrWhiteSpace(user))
             {
-                throw new ArgumentException("user is null");
+                return false;
             }
             return true;
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    connection.Open();
-            //    label1.Text = "connected";
-            //    connection.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error" + ex);
-            //}
         }
 
         private void manzone_Click(object sender, EventArgs e)
