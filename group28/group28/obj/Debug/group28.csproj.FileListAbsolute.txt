@@ -224,7 +224,6 @@ D:\Git's\vrs 2\new_github\group28\group28\obj\Debug\group28.DeleteCourseStu.reso
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\bin\Debug\group28.exe.config
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\bin\Debug\group28.exe
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\bin\Debug\group28.pdb
-C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.csprojAssemblyReference.cache
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.AddCourseStu.resources
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.Add_course.resources
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.Add_student.resources
@@ -251,3 +250,4 @@ C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.csproj
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.csproj.CoreCompileInputs.cache
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.exe
 C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.pdb
+C:\Users\mtzat\Desktop\final\new_github\group28\group28\obj\Debug\group28.csprojAssemblyReference.cache
