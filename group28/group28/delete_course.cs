@@ -20,11 +20,18 @@ namespace group28
             connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Database23.mdb;
 Persist Security Info=False;";
         }
-
+        public bool checkisnull(string id)
+        {
+            if (id == "")
+            {
+                return true;
+            }
+            return false;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             string id = textB_num.Text.ToString();
-            if (id == "") { MessageBox.Show("you must insert a course number"); }
+            if (checkisnull(id)) { MessageBox.Show("you must insert a course number"); }
             else
             {
                 connection.Open();
