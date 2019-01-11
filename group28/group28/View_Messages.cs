@@ -26,15 +26,24 @@ Persist Security Info=False;";
 
         private void View_Messages_Load(object sender, EventArgs e)
         {
-            view();
+            view1();
+            view2();
         }
-        private void view()
+        private void view1()
         {
-            sda = new OleDbDataAdapter("SELECT sender_id,reciever_id,Text FROM messages WHERE messages.sender_id ='" + LoginInfo.userid + "' OR messages.reciever_id ='" + LoginInfo.userid + "'", connection);
+            sda = new OleDbDataAdapter("SELECT sender_id,reciever_id,Text FROM messages WHERE messages.sender_id ='" + LoginInfo.userid + "'", connection);
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+        private void view2()
+        {
+            sda = new OleDbDataAdapter("SELECT sender_id,Text FROM messages WHERE messages.reciever_id ='" + LoginInfo.userid + "'", connection);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView2.DataSource = dt;
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
