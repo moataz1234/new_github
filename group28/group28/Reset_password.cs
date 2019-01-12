@@ -34,14 +34,27 @@ Persist Security Info=False;";
             Form1 f = new Form1();
             f.Show();
         }
-
+        public bool isnull(string id , string user, string pw)
+        {
+            if (user == "" || pw == "" || id == "")
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool studentuser(string user)
+        {
+            if (user[0] == 's')
+                return true;
+            return false;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             string username1 = textB_num.Text.ToString();
             string npw = textB_pw.Text.ToString();
             string id = textB_id.Text.ToString();
-            if (username1 == "" || npw == "" || id=="") { label3.Text="insert your id and username and new password!"; }
-            else if (username1[0] == 's')
+            if ( isnull(username1,npw,id)) { label3.Text = "insert your id and username and new password!"; }
+            else if (studentuser(username1))
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();

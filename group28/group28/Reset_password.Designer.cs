@@ -98,11 +98,11 @@
             // 
             this.label_title.AutoSize = true;
             this.label_title.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label_title.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.Font = new System.Drawing.Font("Andalus", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label_title.Location = new System.Drawing.Point(191, 18);
+            this.label_title.Location = new System.Drawing.Point(168, 9);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(302, 54);
+            this.label_title.Size = new System.Drawing.Size(291, 61);
             this.label_title.TabIndex = 38;
             this.label_title.Text = "Reset Password";
             // 
@@ -172,13 +172,13 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Honeydew;
             this.button1.ImageKey = "(none)";
-            this.button1.Location = new System.Drawing.Point(332, 183);
+            this.button1.Location = new System.Drawing.Point(288, 175);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 38);
+            this.button1.Size = new System.Drawing.Size(143, 46);
             this.button1.TabIndex = 27;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = false;
@@ -226,9 +226,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textB_id);
-            this.groupBox1.Location = new System.Drawing.Point(100, 126);
+            this.groupBox1.Location = new System.Drawing.Point(81, 86);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 227);
+            this.groupBox1.Size = new System.Drawing.Size(452, 227);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reset password";
@@ -240,16 +240,15 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(7, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 34;
-            this.label3.Text = "label3";
             // 
             // Reset_password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(637, 387);
+            this.ClientSize = new System.Drawing.Size(599, 341);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.pictureBox1);
