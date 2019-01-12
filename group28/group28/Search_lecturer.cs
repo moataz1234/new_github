@@ -66,14 +66,20 @@ Persist Security Info=False;";
                 {
                     MessageBox.Show("Duplicate");
                 }
-                if (count < 1)
+                if ( ISincorrect(count))
                 {
                     MessageBox.Show("Incorrect");
                 }
                 connection.Close();
             }
-        }
 
+        }
+        public bool ISincorrect(int c)
+        {
+            if (c > 1) { return false; }
+            if (c == 1) { return false; }
+            return true;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             ManagerZone man = new ManagerZone();
