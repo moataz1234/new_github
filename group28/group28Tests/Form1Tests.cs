@@ -98,4 +98,15 @@ namespace group28.Tests
             Assert.IsFalse(ss.iswhite(""));
         }
     }
+
+    [TestClass()]
+    public class reset_pwtest
+    {
+        [TestMethod()]
+        public void isnull()
+        {
+            Reset_password ss = new Reset_password();
+            Assert.IsFalse(ss.isnull("stu","231","1223"));
+        }
+    }
 }
