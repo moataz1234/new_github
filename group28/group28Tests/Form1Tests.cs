@@ -109,4 +109,15 @@ namespace group28.Tests
             Assert.IsFalse(ss.isnull("stu","231","1223"));
         }
     }
+
+    [TestClass()]
+    public class reset_pwusertest
+    {
+        [TestMethod()]
+        public void userstudenttest()
+        {
+            Reset_password ss = new Reset_password();
+            Assert.IsTrue(ss.studentuser("stu"));
+        }
+    }
 }
