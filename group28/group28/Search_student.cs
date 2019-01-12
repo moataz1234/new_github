@@ -36,11 +36,16 @@ Persist Security Info=False;";
             this.studentTableAdapter.Fill(this.database23DataSet.student);
 
         }
-
+        public bool iswhite(string id)
+        {
+            if (id == "")
+                return false;
+            return true;
+        }
         private void btn_search_lec_Click(object sender, EventArgs e)
         {
             string id = string.Format(textB_id.Text);
-            if (id == "")
+            if (!iswhite(id))
             {
                 MessageBox.Show("You Must Insert a Student ID !");
             }
