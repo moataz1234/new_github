@@ -76,4 +76,15 @@ namespace group28.Tests
             Assert.IsFalse(d.checkisnull("asd"));
         }
     }
+
+    [TestClass()]
+    public class search_lecturertest
+    {
+        [TestMethod()]
+        public void isincorrectTest()
+        {
+            Search_lecturer ss = new Search_lecturer();
+            Assert.IsTrue(ss.ISincorrect(0));
+        }
+    }
 }
