@@ -87,4 +87,15 @@ namespace group28.Tests
             Assert.IsTrue(ss.ISincorrect(0));
         }
     }
+
+    [TestClass()]
+    public class search_studenttest
+    {
+        [TestMethod()]
+        public void iswhiteTest()
+        {
+            Search_student ss = new Search_student();
+            Assert.IsFalse(ss.iswhite(""));
+        }
+    }
 }
