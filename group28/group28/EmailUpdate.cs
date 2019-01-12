@@ -28,13 +28,12 @@ Persist Security Info=False;";
         {
             string username1 =  LoginInfo.userid;
             string newemail = textBox1.Text.ToString();
+            if (string.IsNullOrWhiteSpace(newemail)) { MessageBox.Show("Insert your new E-mail <-->(-_-)"); }
             connection.Open();
             OleDbCommand cmd = new OleDbCommand("update student set Email = '" +newemail+ "' WHERE ID = '"+username1+"'", connection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data Updated", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             connection.Close();
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)

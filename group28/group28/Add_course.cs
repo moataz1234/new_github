@@ -52,9 +52,11 @@ namespace group28
                 {
                     {
                         string value = courseDataGridView.Rows[rows].Cells[0].Value.ToString();
-                        //if (num == value)
-                        if (isequal(value, num))
-                            count++;  
+                        if (num == value)
+                        {
+                            if (isequal(value, num))
+                                count++;
+                        }
                     }
                 }
                 if (count == 0)
