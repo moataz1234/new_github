@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static group28.Form1;
 
 namespace group28
 {
@@ -79,9 +80,18 @@ namespace group28
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Hide();
-            ManagerZone mm = new ManagerZone();
-            mm.Show();
+            ManagerZone man = new ManagerZone();
+            LecturerZone lec = new LecturerZone();
+            this.Hide();
+            string usera = LoginInfo.user;
+            if (usera[0] == 'l')
+            {
+                lec.Show();
+            }
+            if (usera[0] == 'm')
+            {
+                man.Show();
+            }
         }
     }
 }
