@@ -241,7 +241,7 @@
             // 
             // textB_lecname
             // 
-            this.textB_lecname.Location = new System.Drawing.Point(148, 202);
+            this.textB_lecname.Location = new System.Drawing.Point(148, 205);
             this.textB_lecname.Name = "textB_lecname";
             this.textB_lecname.Size = new System.Drawing.Size(169, 22);
             this.textB_lecname.TabIndex = 8;

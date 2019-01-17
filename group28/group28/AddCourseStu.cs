@@ -124,7 +124,7 @@ Persist Security Info=False;";
                     MessageBox.Show("Failed due to " + ex.Message);
                 }
             }
-            if (count == 1 )
+            if (count !=0)
             {
                 MessageBox.Show("You Already have This Course");
             }

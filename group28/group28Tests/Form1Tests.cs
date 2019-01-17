@@ -27,8 +27,6 @@ namespace group28.Tests
         public void checkuserTest()
         {
             Add_student f1 = new Add_student();
-            
-            Assert.ThrowsException<ArgumentException>(()=>f1.checkuser("213"));
             Assert.IsTrue(f1.checkuser("s213"));
         }
     }

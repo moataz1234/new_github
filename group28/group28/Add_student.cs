@@ -46,13 +46,12 @@ namespace group28
             int count = 0;
             int count2 = 0;
             if (id == "" || user == "" || fn == "" || ln == "" || pw == "" || mail == "" || gender == "" || dp == "") { MessageBox.Show("you must enter all information about student"); }
-            else if (user[0] != 's')
-            {
+
                 if (checkuser(user))
                 {
                     MessageBox.Show("First Letter in username must be (s)");
                 }
-            }
+            
             else
             {
                 for (int rows = 0; rows < (studentDataGridView.Rows.Count) - 1; rows++)
@@ -84,13 +83,13 @@ namespace group28
                 else if (count == 1)
                     MessageBox.Show("The student Already Exist!");
                 else if (count2 == 1)
-                    MessageBox.Show( "User is Exist!!!");
+                    MessageBox.Show( "Username is taken,choose another one!!");
             }
         }
         public bool checkuser(string user)
         {
             if (user[0] != 's')
-                throw new ArgumentException("user incorrect");
+                return false;
             return true;
         }
         public bool isStudentExist(string id)

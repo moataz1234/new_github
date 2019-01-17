@@ -58,6 +58,7 @@ namespace group28
                         {
                             courseDataGridView.Rows[rows].Cells[4].Value = day;
                             courseDataGridView.Rows[rows].Cells[5].Value = hour;
+                            MessageBox.Show("Course Time Update Successfuly");
                         }
                         else
                             MessageBox.Show("You can't update because time conflicts with another course at same day,hour and class ");
