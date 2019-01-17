@@ -55,9 +55,11 @@ Persist Security Info=False;";
         private void button2_Click(object sender, EventArgs e)
         {
             string day="";
+            string owncrs = "";
             string hour="";
             string username1 = LoginInfo.userid;
             string countt = comboBox1.SelectedValue.ToString();
+            int count5 = 0;
             //----------------------------------------------------------------------
             connection.Open();
             OleDbCommand command1 = new OleDbCommand();
@@ -69,14 +71,29 @@ Persist Security Info=False;";
                 hour = reader1["Hour"].ToString();
                 day = reader1["day"].ToString();
             }
+            connection.Close();
             //----------------------------------------------------------------------
-            OleDbCommand command2 = new OleDbCommand();
-            command2.Connection = connection;
-            command2.CommandText = "select * from Course WHERE Hour = '" + hour + "' AND day='" + day + "'";
-            OleDbDataReader reader2 = command2.ExecuteReader();
+            connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\Database23.mdb;
+Persist Security Info=False;";
+            connection.Open();
+            OleDbCommand command4 = new OleDbCommand();
+            //command1.Connection = connection;
+             command4 = new OleDbCommand("select * from student_course WHERE StudentID = '" + username1 + "'", connection);
+
+           // command1.CommandText = "select * from student_course WHERE SutdentID = '" + username1 + "'";
+            OleDbDataReader reader2 = command4.ExecuteReader();
             int count2 = 0;
             while (reader2.Read())
             {
+                owncrs = reader2["Course_Number"].ToString();
+                OleDbCommand command5 = new OleDbCommand();
+                command5.Connection = connection;
+                command5.CommandText = "select * from Course WHERE Number = '" + owncrs + "' AND day= '" + day + "' AND Hour= '" + hour + "'";
+                OleDbDataReader reader5 = command5.ExecuteReader();
+                while (reader5.Read())
+                {
+                    count5++;
+                }
                 count2++;
             }
             //------------------------------------------------------------------------------
@@ -89,11 +106,7 @@ Persist Security Info=False;";
             {
                 count++;
             }
-            if (count == 1)
-            {
-                MessageBox.Show("You Already have This Course");
-            }
-            if (count < 1 && count2==0)
+            if (count < 1 && count5 == 0)
             {
                 try
                 {
@@ -111,7 +124,11 @@ Persist Security Info=False;";
                     MessageBox.Show("Failed due to " + ex.Message);
                 }
             }
-            if (checkcount(count,count2)) { MessageBox.Show("conflicts with another course"); }
+            if (count == 1 )
+            {
+                MessageBox.Show("You Already have This Course");
+            }
+            else if (count5 != 0 && count==0) { MessageBox.Show("conflicts with another course"); }
             connection.Close();
         }
     public bool checkcount(int count1, int count2)
