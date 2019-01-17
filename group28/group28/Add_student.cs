@@ -89,8 +89,8 @@ namespace group28
         public bool checkuser(string user)
         {
             if (user[0] != 's')
-                return false;
-            return true;
+                return true;
+            return false;
         }
         public bool isStudentExist(string id)
         {

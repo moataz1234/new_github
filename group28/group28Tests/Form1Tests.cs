@@ -27,7 +27,7 @@ namespace group28.Tests
         public void checkuserTest()
         {
             Add_student f1 = new Add_student();
-            Assert.IsTrue(f1.checkuser("s213"));
+            Assert.IsTrue(f1.checkuser("213"));
         }
     }
     [TestClass()]
